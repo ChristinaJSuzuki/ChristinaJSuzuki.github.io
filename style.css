@@ -1,0 +1,134 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #fff;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background-color: #ff5722;
+    color: #000;
+}
+
+/* Intro Section */
+.intro {
+    margin-top: 5rem;
+}
+
+.intro p {
+    font-size: 1.2rem;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.highlight {
+    color: #ffb400;
+}
+
+.profile-picture {
+    width: 150px;
+    height: auto;
+    margin: 2rem 0;
+    border-radius: 50%;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Buttons Section */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.buttons button {
+    background-color: #1e3a8a;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #2563eb;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro h2 {
+        font-size: 1.5rem;
+    }
+
+    .buttons button {
+        padding: 0.6rem 1.5rem;
+    }
+}
