@@ -1,2 +1,3 @@
 function showMessage(message) {
-    alert(`You clicked on the ${message} button!`);
+  alert(`You clicked on the ${message} button!`);
+}
