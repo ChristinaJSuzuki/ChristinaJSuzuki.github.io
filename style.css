@@ -1,4 +1,4 @@
-/* General Reset */
+/* Custom Fonts and Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,83 +6,31 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
     background-color: #000000;
     color: #FAF9F6;
-    text-align: center;
+    font-family: 'Quantico', sans-serif;
 }
 
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    position: relative;
-}
-
+/* Logo Styling */
 .logo {
-    font-size: 1.5rem;
     font-family: 'Quantico', sans-serif;
     color: #FAF9F6;
 }
 
-/* Navbar */
-nav {
-    border: 1px solid #FAF9F6;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-nav ul li a {
-    color: #FAF9F6;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
+/* Navbar Styling */
+.nav-link {
     font-family: 'Silkscreen', sans-serif;
-    transition: all 0.3s ease;
-    border: 1px solid #FAF9F6;
-    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-nav ul li a.active,
-nav ul li a:hover {
+.nav-link.active,
+.nav-link:hover {
     background-color: #F45727;
     color: #000000;
 }
 
-/* Intro Section */
-.intro {
-    margin-top: 5rem;
-}
-
-.intro p {
-    font-size: 1.2rem;
-}
-
-.intro h1 {
-    font-size: 3rem;
-    margin: 0.5rem 0;
-    font-family: 'Silkscreen', sans-serif;
-    letter-spacing: 2px;
-}
-
-.intro p:first-of-type {
-    font-family: 'Tiny5', sans-serif;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.highlight {
-    color: #FDC94A;
-}
-
-.intro .highlight:nth-child(1) {
+/* Intro Section Styling */
+.intro .highlight {
     color: #FDC94A;
 }
 
@@ -90,41 +38,20 @@ nav ul li a:hover {
     color: #3D9E9C;
 }
 
-.profile-picture {
-    width: 150px;
-    height: 150px;
-    margin: 2rem 0;
-    border-radius: 50%;
-}
-
-.intro h2 {
-    font-size: 2rem;
-    margin-top: 1rem;
-    font-family: 'Silkscreen', sans-serif;
-}
-
-/* Buttons Section */
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.buttons button {
-    background-color: #376ADA;
-    color: #FAF9F6;
-    border: none;
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
+/* Button Styling */
+.shadow-custom {
     box-shadow: 2px 2px 0px #FAF9F6;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #376ADA;
+    border: none;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.buttons button:hover {
+.btn-primary:hover {
     background-color: #2563eb;
     transform: scale(1.05);
 }
@@ -135,20 +62,11 @@ nav ul li a:hover {
         flex-direction: column;
     }
 
-    nav ul {
-        flex-direction: column;
-        margin-top: 1rem;
-    }
-
     .intro h1 {
         font-size: 2.5rem;
     }
 
     .intro h2 {
         font-size: 1.5rem;
-    }
-
-    .buttons button {
-        padding: 0.6rem 1.5rem;
     }
 }
