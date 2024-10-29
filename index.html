@@ -20,11 +20,11 @@
 
 <body class="bg-black text-light text-center">
 
-  <!-- Header -->
-  <header class="d-flex justify-content-between align-items-center p-3">
-    <div class="logo fs-4 text-uppercase">CS</div>
-    <nav>
-      <ul class="nav justify-content-center border border-light rounded p-2">
+  <!-- Header with Logo and Centered Navbar -->
+  <header class="d-flex align-items-center p-3">
+    <div class="logo fs-4 text-uppercase me-auto">CS</div>
+    <nav class="mx-auto">
+      <ul class="nav border border-light rounded px-3">
         <li class="nav-item">
           <a class="nav-link text-light active" href="#home">Home</a>
         </li>
@@ -44,8 +44,10 @@
   <!-- Main Content -->
   <main class="container my-5">
     <section class="intro mb-5">
-      <p class="text-muted" style="font-family: 'Tiny5', sans-serif;">My name is</p>
-      <h1 class="display-3" style="font-family: 'Silkscreen', sans-serif;">CHRISTINA SUZUKI</h1>
+      <div class="d-flex justify-content-center align-items-baseline">
+        <p class="me-3 small-text" style="font-family: 'Tiny5', sans-serif;">My name is</p>
+        <h1 class="display-3" style="font-family: 'Silkscreen', sans-serif;">CHRISTINA SUZUKI</h1>
+      </div>
       <p>I am a <span class="highlight">UX Designer</span> & <span class="highlight">Full-Stack Engineer</span> from
         <span class="highlight">Tokyo</span>, based in <span class="highlight">Toronto</span>.
       </p>

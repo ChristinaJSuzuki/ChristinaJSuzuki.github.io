@@ -38,6 +38,11 @@ body {
     color: #3D9E9C;
 }
 
+.intro .small-text {
+    font-size: 1rem;
+    color: #888;
+}
+
 /* Button Styling */
 .shadow-custom {
     box-shadow: 2px 2px 0px #FAF9F6;
