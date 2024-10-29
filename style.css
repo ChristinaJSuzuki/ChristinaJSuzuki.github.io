@@ -21,7 +21,7 @@ body {
 .nav-link:hover {
     background-color: #F45727;
     color: #000000;
-    padding: 1rem;
+    margin: 1rem;
     border-radius: 5px;
 }
 
