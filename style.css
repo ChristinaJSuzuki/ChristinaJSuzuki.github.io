@@ -21,8 +21,6 @@ body {
 .nav-link:hover {
     background-color: #F45727;
     color: #000000;
-    margin: 1rem;
-    border-radius: 5px;
 }
 
 /* Intro Section Styling */
