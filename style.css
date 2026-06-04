@@ -228,11 +228,13 @@ header nav {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+    align-items: center;
 }
 
 @media (min-width: 768px) {
     .about-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 3rem;
     }
 }
 
@@ -248,7 +250,7 @@ header nav {
     justify-content: space-between;
     text-decoration: none;
     color: inherit;
-    min-height: 380px;
+    min-height: 420px;
     position: relative;
     transition: transform 0.2s ease;
 }
@@ -258,10 +260,7 @@ header nav {
 }
 
 .card-poster .card-overlay {
-    background: rgba(0, 0, 0, 0.5);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: auto;
-    flex-shrink: 0;
+    display: none !important;
 }
 
 .card-poster-dev {
@@ -282,14 +281,38 @@ header nav {
     margin-top: .75rem;
 }
 
+/* hide any remaining accessory elements to show image-only cards */
+.card-poster .badge,
+.card-poster .poster-label {
+    display: none !important;
+}
+
+/* Left info column styling for balance */
+.about-grid>section:first-child {
+    max-width: 620px;
+    padding-right: 2rem;
+}
+
+.about-grid>section:first-child p {
+    font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+    line-height: 1.8;
+    color: var(--text);
+}
+
+.about-grid>section:first-child .btn-pixel {
+    margin-top: 1.5rem;
+}
+
 .about-me-heading {
-    display: inline-block;
+    display: block;
     background: #000;
     color: #fff;
-    padding: .35rem .75rem;
+    padding: .4rem .9rem;
     border-radius: 8px;
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-size: clamp(1rem, 2.2vw, 1.4rem);
     font-family: 'Silkscreen', sans-serif;
+    width: max-content;
+    margin-left: 0;
 }
 
 /* Dev page tech badges */
