@@ -203,6 +203,12 @@ header nav {
     box-shadow: 4px 4px 0 0 var(--border);
 }
 
+.page-about .btn-pixel {
+    background-color: #FEC638;
+    color: #000;
+    border-color: #FEC638;
+}
+
 .btn-pixel:hover {
     filter: brightness(1.05);
 }
@@ -234,12 +240,28 @@ header nav {
     border: 4px solid var(--border);
     border-radius: 12px;
     overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    color: inherit;
+    min-height: 280px;
 }
 
-.card-poster img {
-    display: block;
-    width: 100%;
-    height: auto;
+.card-poster .card-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-poster-dev {
+    background-image: url('https://kommodo.ai/i/CNsjLkDU4hjAymMed9wi');
+}
+
+.card-poster-design {
+    background-image: url('https://kommodo.ai/i/cQetdo21kkHtzlwzTdXY');
 }
 
 .poster-label {
@@ -250,6 +272,16 @@ header nav {
     padding: .35rem .8rem;
     border-radius: 8px;
     margin-top: .75rem;
+}
+
+.about-me-heading {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: .35rem .75rem;
+    border-radius: 8px;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-family: 'Silkscreen', sans-serif;
 }
 
 /* Dev page tech badges */

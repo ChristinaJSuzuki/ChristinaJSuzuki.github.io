@@ -30,7 +30,7 @@
         <div class="frame">
             <div class="mb-4">
                 <nav class="mx-auto mb-3" aria-label="breadcrumb">
-                    <h2 class="h5 text-start m-0" style="font-family: 'Silkscreen', sans-serif;">ABOUT ME</h2>
+                    <h2 class="h5 text-start m-0 about-me-heading">ABOUT ME</h2>
                 </nav>
                 <h1 class="display-5 text-start" style="font-family: 'Silkscreen', sans-serif; letter-spacing: 3px;">
                     PORTFOLIO</h1>
@@ -50,20 +50,24 @@
                 <section>
                     <div class="row g-4">
                         <div class="col-12 col-lg-6">
-                            <div class="card-poster p-2 h-100">
-                                <img src="./src/poster-development.jpg" alt="Development poster">
+                            <a href="dev.html" class="card-poster card-poster-dev p-2 h-100"
+                                aria-label="Go to development page">
                                 <div class="d-flex justify-content-end p-2"><span
                                         class="badge rounded-pill bg-dark">DEVELOPMENT</span></div>
-                                <div class="text-center"><span class="poster-label">MY TECHNOLOGIES</span></div>
-                            </div>
+                                <div class="card-overlay d-flex align-items-end justify-content-center p-3">
+                                    <span class="poster-label">MY TECHNOLOGIES</span>
+                                </div>
+                            </a>
                         </div>
                         <div class="col-12 col-lg-6">
-                            <div class="card-poster p-2 h-100">
-                                <img src="./src/poster-design.jpg" alt="Design poster">
+                            <a href="design.html" class="card-poster card-poster-design p-2 h-100"
+                                aria-label="Go to design page">
                                 <div class="d-flex justify-content-end p-2"><span
                                         class="badge rounded-pill bg-dark">DESIGN</span></div>
-                                <div class="text-center"><span class="poster-label">USER EXPERIENCE</span></div>
-                            </div>
+                                <div class="card-overlay d-flex align-items-end justify-content-center p-3">
+                                    <span class="poster-label">USER EXPERIENCE</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </section>
