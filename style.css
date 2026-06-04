@@ -303,6 +303,22 @@ header nav {
     margin-top: 1.5rem;
 }
 
+/* fixed info frame dimensions per design */
+.info-frame {
+    width: 370px;
+    height: 232px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* slight black stroke on contact button */
+.page-about .btn-pixel {
+    background-color: #FEC638;
+    color: #000;
+    border: 2px solid #000;
+}
+
 .about-me-heading {
     display: block;
     background: #000;
