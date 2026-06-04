@@ -230,7 +230,6 @@ header nav {
 .page-about .frame {
     width: 100%;
     max-width: 1453px;
-    min-width: 1453px;
     min-height: 921px;
     margin: 0 auto;
 }
@@ -337,20 +336,41 @@ header nav {
     min-width: auto;
 }
 
+/* Typography and spacing per design request */
 .about-me-heading {
     display: block;
     background: #000;
     color: #fff;
-    padding: .4rem .9rem;
+    padding: .35rem .75rem;
     border-radius: 8px;
-    font-size: clamp(1rem, 2.2vw, 1.4rem);
+    font-size: 40px;
+    font-weight: 400;
     font-family: 'Silkscreen', sans-serif;
     width: max-content;
     margin-left: 0;
+    margin-bottom: .6rem;
+    /* little spacing under ABOUT ME */
 }
 
 .portfolio-heading {
+    font-size: 50px;
+    font-weight: 400;
     margin-bottom: 0;
+}
+
+/* Info frame paragraph sizes */
+.info-frame p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+}
+
+.info-frame p+p {
+    /* the "Check out my Resume here." line */
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: .25rem;
 }
 
 /* Dev page tech badges */
