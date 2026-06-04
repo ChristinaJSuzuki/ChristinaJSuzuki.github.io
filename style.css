@@ -265,11 +265,11 @@ header nav {
 }
 
 .card-poster-dev {
-    background-image: url('https://kommodo.ai/i/CNsjLkDU4hjAymMed9wi');
+    /* Background image set via JavaScript */
 }
 
 .card-poster-design {
-    background-image: url('https://kommodo.ai/i/cQetdo21kkHtzlwzTdXY');
+    /* Background image set via JavaScript */
 }
 
 .poster-label {
