@@ -234,7 +234,7 @@ header nav {
 @media (min-width: 768px) {
     .about-grid {
         grid-template-columns: 1.2fr 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 }
 
@@ -250,6 +250,7 @@ header nav {
     text-decoration: none;
     color: inherit;
     position: relative;
+    line-height: 0;
 }
 
 .card-poster:hover {
@@ -264,14 +265,6 @@ header nav {
     display: block;
     width: 100%;
     height: auto;
-}
-
-.card-poster-dev {
-    /* Background image set via JavaScript */
-}
-
-.card-poster-design {
-    /* Background image set via JavaScript */
 }
 
 .poster-label {
@@ -292,20 +285,20 @@ header nav {
 
 /* Left info column styling for balance */
 .about-grid>section:first-child {
-    max-width: 370px;
-    padding-right: 2rem;
+    max-width: 340px;
+    padding-right: 1.5rem;
 }
 
 .about-grid>section:first-child p {
     font-size: clamp(0.95rem, 1.4vw, 1.05rem);
     line-height: 1.8;
     color: var(--text);
-    max-width: 330px;
+    max-width: 310px;
 }
 
 .about-grid>section:first-child .btn-pixel {
     margin-top: 1.5rem;
-    padding: .45rem .95rem;
+    padding: .5rem 1rem;
 }
 
 /* Nav pill container black frame on about page */
@@ -317,8 +310,7 @@ header nav {
 
 /* fixed info frame dimensions per design */
 .info-frame {
-    width: 370px;
-    height: 232px;
+    width: 340px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -346,7 +338,7 @@ header nav {
 }
 
 .portfolio-heading {
-    margin-bottom: 1rem;
+    margin-bottom: 0.4rem;
 }
 
 /* Dev page tech badges */
@@ -527,7 +519,7 @@ header nav {
     }
 
     .portfolio-heading {
-        margin-bottom: 1rem;
+        margin-bottom: .25rem;
     }
 
     header nav {
