@@ -223,6 +223,18 @@ header nav {
     box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.25);
 }
 
+.page-about main.container {
+    max-width: 1453px;
+}
+
+.page-about .frame {
+    width: 100%;
+    max-width: 1453px;
+    min-width: 1453px;
+    min-height: 921px;
+    margin: 0 auto;
+}
+
 /* About page layout */
 .about-grid {
     display: grid;
@@ -338,7 +350,7 @@ header nav {
 }
 
 .portfolio-heading {
-    margin-bottom: 0.4rem;
+    margin-bottom: 0;
 }
 
 /* Dev page tech badges */
