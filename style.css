@@ -248,12 +248,20 @@ header nav {
     justify-content: space-between;
     text-decoration: none;
     color: inherit;
-    min-height: 280px;
+    min-height: 380px;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.card-poster:hover {
+    transform: translateY(-4px);
 }
 
 .card-poster .card-overlay {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto;
+    flex-shrink: 0;
 }
 
 .card-poster-dev {
