@@ -239,8 +239,9 @@ header nav {
 }
 
 .card-poster {
-    border: 4px solid var(--border);
-    border-radius: 12px;
+    border: 6px solid #fff;
+    outline: 4px solid #000;
+    border-radius: 6px;
     overflow: hidden;
     background-size: cover;
     background-position: center;
@@ -252,11 +253,10 @@ header nav {
     color: inherit;
     min-height: 420px;
     position: relative;
-    transition: transform 0.2s ease;
 }
 
 .card-poster:hover {
-    transform: translateY(-4px);
+    transform: none;
 }
 
 .card-poster .card-overlay {
@@ -289,7 +289,7 @@ header nav {
 
 /* Left info column styling for balance */
 .about-grid>section:first-child {
-    max-width: 620px;
+    max-width: 400px;
     padding-right: 2rem;
 }
 
@@ -301,6 +301,18 @@ header nav {
 
 .about-grid>section:first-child .btn-pixel {
     margin-top: 1.5rem;
+}
+
+/* ensure inner info frame constrains paragraph width */
+.info-frame p {
+    max-width: 370px;
+}
+
+/* Nav pill container black frame on about page */
+.page-about .nav-pills-container {
+    border: 4px solid #000 !important;
+    box-shadow: none !important;
+    background: transparent;
 }
 
 /* fixed info frame dimensions per design */
