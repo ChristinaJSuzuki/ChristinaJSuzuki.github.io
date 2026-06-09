@@ -228,9 +228,9 @@ header nav {
 }
 
 .page-about .frame {
-    width: 100%;
+    width: auto;
     max-width: 1453px;
-    min-height: 921px;
+    min-height: auto;
     margin: 0 auto;
 }
 
