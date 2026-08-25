@@ -239,16 +239,6 @@ header .logo {
     filter: brightness(1.05);
 }
 
-/* Framed container for light pages */
-.frame {
-    background-color: var(--bg);
-    color: var(--text);
-    border: 6px solid var(--border);
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.25);
-}
-
 .page-about .about-main {
     max-width: none;
     margin: 3rem auto 0;
@@ -258,6 +248,11 @@ header .logo {
 }
 
 .page-about .frame {
+    background-color: var(--bg);
+    border: 6px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.25);
+    color: var(--text);
     display: block;
     height: calc(100dvh - 9rem);
     margin: 0 auto;
@@ -288,28 +283,27 @@ header .logo {
     }
 }
 
-.page-about .card-poster {
+.page-about .about-card {
     border: none;
     outline: none;
     border-radius: 0;
     overflow: hidden;
     background: none;
     display: inline-block;
-    width: auto;
+    width: 350px;
     max-width: 100%;
     text-decoration: none;
     color: inherit;
     position: relative;
     line-height: 0;
     justify-self: center;
-    width: min(100%, 350px);
 }
 
-.page-about .card-poster:hover {
+.page-about .about-card:hover {
     transform: none;
 }
 
-.page-about .card-image {
+.page-about .about-card-image {
     display: block;
     object-fit: contain;
     max-width: 100%;
@@ -746,12 +740,12 @@ header .logo {
         width: 2.5rem;
     }
 
-    .frame {
+    .page-about .frame {
         padding: 1.5rem;
         border-width: 4px;
     }
 
-    .about-grid {
+    .page-about .about-grid {
         gap: 1.5rem;
         grid-template-columns: 1fr;
     }
@@ -793,7 +787,7 @@ header .logo {
         overflow-x: auto;
     }
 
-    .about-grid {
+    .page-about .about-grid {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -846,13 +840,5 @@ header .logo {
 @media (min-width: 993px) {
     header {
         justify-content: center;
-    }
-
-    .portfolio-heading {
-        margin-bottom: .25rem;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr 1fr;
     }
 }
