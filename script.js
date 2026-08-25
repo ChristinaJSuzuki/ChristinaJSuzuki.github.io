@@ -10,15 +10,21 @@ function showMessage(message) {
   if (!img || !prev || !next) return;
 
   const images = [
-    "./src/project-1.jpg", // Wires / hardware detail
-    "./src/poster-development.jpg", // Vintage computer
-    "./src/poster-design.jpg", // Controllers pile
+    "./src/devcords.png",
+    "./src/card-technologies.jpg",
+    "./src/card-design.jpg",
+  ];
+  const altText = [
+    "Development project preview",
+    "Vintage computer technology project",
+    "Game controller design project",
   ];
   let index = 0;
 
   function show(i) {
     index = (i + images.length) % images.length;
     img.src = images[index];
+    img.alt = altText[index];
   }
 
   prev.addEventListener("click", () => show(index - 1));

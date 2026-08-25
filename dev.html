@@ -26,39 +26,41 @@
         </nav>
     </header>
 
-    <main class="container my-5 text-start">
-        <h1 class="display-5 text-center dev-heading mb-5">⟨ DEVELOPMENT ⟩</h1>
+    <main class="container dev-main">
+        <h1 class="dev-heading"><span aria-hidden="true">&lt;</span> DEVELOPMENT <span aria-hidden="true">&gt;</span>
+        </h1>
 
-        <div class="row g-5 align-items-start">
-            <div class="col-12 col-lg-6">
-                <h3 class="mb-3 dev-section-heading">PROJECTS</h3>
-                <div class="project-view mb-2">
-                    <img id="projectImage" src="./src/project-1.jpg" alt="Project preview">
+        <div class="dev-layout">
+            <section class="projects-section">
+                <h2 class="dev-section-heading">PROJECTS</h2>
+                <div class="project-view">
+                    <img id="projectImage" src="./src/devcords.png" alt="Development project preview">
                     <div class="project-nav">
-                        <span id="prevBtn" class="arrow">‹</span>
-                        <span id="nextBtn" class="arrow">›</span>
+                        <button id="prevBtn" class="arrow" type="button" aria-label="Previous project">&lt;</button>
+                        <button id="nextBtn" class="arrow" type="button" aria-label="Next project">&gt;</button>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <h3 class="mb-3 dev-section-heading">TECH STACK
-                </h3>
-                <div class="badges">
-                    <div class="tech-badge"><span class="name">HTML</span><span>🧩</span></div>
-                    <div class="tech-badge"><span class="name">CSS</span><span>🎨</span></div>
-                    <div class="tech-badge"><span class="name">JAVASCRIPT</span><span>⚡</span></div>
-                    <div class="tech-badge"><span class="name">REACT</span><span>⚛️</span></div>
-                    <div class="tech-badge"><span class="name">NODE</span><span>🟢</span></div>
-                    <div class="tech-badge"><span class="name">PYTHON</span><span>🐍</span></div>
-                    <div class="tech-badge"><span class="name">POSTGRESQL</span><span>🗄️</span></div>
-                    <div class="tech-badge"><span class="name">BOOTSTRAP</span><span>🅱️</span></div>
-                    <div class="tech-badge"><span class="name">REDUX</span><span>🌀</span></div>
-                    <div class="tech-badge"><span class="name">OPEN API</span><span>📘</span></div>
+                <p class="project-caption">Full-Stack | Web | Mobile | Game | Software</p>
+            </section>
+            <section class="stack-section">
+                <h2 class="dev-section-heading">TECH STACK</h2>
+                <div class="tech-badges">
+                    <div class="tech-badge"><span class="tech-icon">&lt;/&gt;</span><span class="name">HTML</span></div>
+                    <div class="tech-badge"><span class="tech-icon">N</span><span class="name">NODE</span></div>
+                    <div class="tech-badge"><span class="tech-icon">#</span><span class="name">CSS</span></div>
+                    <div class="tech-badge"><span class="tech-icon">S</span><span class="name">SWAGGER</span></div>
+                    <div class="tech-badge"><span class="tech-icon">JS</span><span class="name">JAVASCRIPT</span></div>
+                    <div class="tech-badge"><span class="tech-icon">API</span><span class="name">OPEN API</span></div>
+                    <div class="tech-badge"><span class="tech-icon">R</span><span class="name">REACT</span></div>
+                    <div class="tech-badge"><span class="tech-icon">A</span><span class="name">ANACONDA</span></div>
+                    <div class="tech-badge"><span class="tech-icon">Py</span><span class="name">PYTHON</span></div>
+                    <div class="tech-badge"><span class="tech-icon">B</span><span class="name">BOOTSTRAP</span></div>
+                    <div class="tech-badge"><span class="tech-icon">DB</span><span class="name">POSTGRESQL</span></div>
+                    <div class="tech-badge"><span class="tech-icon">F</span><span class="name">FLUTTER</span></div>
+                    <div class="tech-badge"><span class="tech-icon">↻</span><span class="name">REDUX</span></div>
                 </div>
-            </div>
+            </section>
         </div>
-
-        <p class="mt-5 text-center">Full-Stack | Web | Mobile | Game | Software</p>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
