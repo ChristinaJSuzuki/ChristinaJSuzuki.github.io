@@ -30,39 +30,6 @@ body {
     font-family: 'Quantico', sans-serif;
 }
 
-/* Container and Main Content */
-.container {
-    width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
-}
-
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-    }
-}
-
 /* Header and Navbar Styling */
 header {
     display: flex;
@@ -76,17 +43,14 @@ header .logo {
     line-height: 1;
 }
 
-header nav {
-    display: flex;
-    align-items: center;
-}
-
 .nav-pills-container {
     backdrop-filter: blur(0.5px);
     border: 2px solid var(--border);
     border-radius: 12px;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3) inset;
     display: flex;
     flex-wrap: wrap;
@@ -95,7 +59,7 @@ header nav {
 
 .nav-link {
     font-family: 'Silkscreen', sans-serif;
-    color: var(--text) !important;
+    color: var(--text);
     transition: background-color 0.25s ease, color 0.25s ease, transform 0.15s ease;
     border-radius: 8px;
     padding: .35rem .6rem;
@@ -110,29 +74,22 @@ header nav {
 /* Active color per page */
 .page-home .nav-link.active {
     background-color: var(--accent-orange);
-    color: #000 !important;
+    color: #000;
 }
 
 .page-about .nav-link.active {
     background-color: var(--accent-green);
-    color: #000 !important;
+    color: #000;
 }
 
 .page-dev .nav-link.active {
     background-color: var(--accent-blue);
-    color: #fff !important;
+    color: #fff;
 }
 
 .page-design .nav-link.active {
     background-color: var(--accent-yellow);
-    color: #000 !important;
-}
-
-header nav {
-    display: flex;
-    align-items: center;
-    margin-left: auto !important;
-    margin-right: 0 !important;
+    color: #000;
 }
 
 /* Intro Section Styling */
@@ -145,16 +102,19 @@ header nav {
 }
 
 .intro .small-text {
+    font-family: 'Tiny5', sans-serif;
     font-size: clamp(0.8rem, 2vw, 1rem);
     color: var(--text);
 }
 
 .intro h1 {
+    font-family: 'Silkscreen', sans-serif;
     font-size: clamp(2rem, 8vw, 4rem);
     word-break: break-word;
 }
 
 .intro h2 {
+    font-family: 'Silkscreen', sans-serif;
     font-size: clamp(1.5rem, 5vw, 3rem);
 }
 
@@ -206,7 +166,10 @@ header nav {
 .page-about .btn-pixel {
     background-color: #FEC638;
     color: #000;
-    border-color: #FEC638;
+    border: 2px solid #000;
+    padding: .35rem .8rem;
+    min-width: auto;
+    font-size: 0.95rem;
 }
 
 .btn-pixel:hover {
@@ -270,30 +233,10 @@ header nav {
     transform: none;
 }
 
-.card-poster .card-overlay {
-    display: none !important;
-}
-
 .card-image {
     display: block;
     width: 100%;
     height: auto;
-}
-
-.poster-label {
-    background: #000;
-    color: #fff;
-    font-family: 'Silkscreen', sans-serif;
-    display: inline-block;
-    padding: .35rem .8rem;
-    border-radius: 8px;
-    margin-top: .75rem;
-}
-
-/* hide any remaining accessory elements to show image-only cards */
-.card-poster .badge,
-.card-poster .poster-label {
-    display: none !important;
 }
 
 /* Left info column styling for balance */
@@ -316,8 +259,8 @@ header nav {
 
 /* Nav pill container black frame on about page */
 .page-about .nav-pills-container {
-    border: 2px solid #000 !important;
-    box-shadow: none !important;
+    border-color: #000;
+    box-shadow: none;
     background: transparent;
 }
 
@@ -327,16 +270,6 @@ header nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-}
-
-/* slight black stroke on contact button */
-.page-about .btn-pixel {
-    background-color: #FEC638;
-    color: #000;
-    border: 2px solid #000;
-    padding: .35rem .8rem;
-    min-width: auto;
-    font-size: 0.95rem;
 }
 
 /* Typography and spacing per design request */
@@ -358,6 +291,7 @@ header nav {
 .portfolio-heading {
     font-size: 50px;
     font-weight: 400;
+    letter-spacing: 3px;
     margin-bottom: 0.2rem;
 }
 
@@ -389,12 +323,6 @@ header nav {
     }
 }
 
-@media (min-width: 1200px) {
-    .badges {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
 .tech-badge {
     display: flex;
     align-items: center;
@@ -415,6 +343,15 @@ header nav {
 .dev-heading {
     font-family: 'Silkscreen', sans-serif;
     letter-spacing: 3px;
+}
+
+.dev-section-heading,
+.design-heading {
+    font-family: 'Silkscreen', sans-serif;
+}
+
+.dev-section-heading {
+    color: var(--accent-teal);
 }
 
 .arrow {
@@ -454,7 +391,7 @@ header nav {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
-        padding: 1rem !important;
+        padding: 1rem;
     }
 
     header nav {
@@ -472,8 +409,8 @@ header nav {
     }
 
     main.container {
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .buttons {
@@ -492,7 +429,7 @@ header nav {
 
     .about-grid {
         gap: 1.5rem;
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr;
     }
 
     .dev-heading {
@@ -517,17 +454,6 @@ header nav {
         font-size: 1.5rem;
     }
 
-    .display-5 {
-        font-size: clamp(1.5rem, 6vw, 2.5rem) !important;
-    }
-
-    h1 {
-        font-size: clamp(1.5rem, 6vw, 3rem) !important;
-    }
-
-    h2 {
-        font-size: clamp(1.2rem, 5vw, 2rem) !important;
-    }
 }
 
 @media (min-width: 577px) and (max-width: 992px) {
