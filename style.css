@@ -99,62 +99,103 @@ header .logo {
     color: #000;
 }
 
-/* Intro Section Styling */
-.intro .highlight {
+/* Home page */
+.page-home .home-main {
+    max-width: 1200px;
+    min-height: calc(100vh - 5rem);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.page-home .home-hero {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: clamp(3.5rem, 8vh, 6.5rem);
+}
+
+.page-home .home-name {
+    align-items: baseline;
+    display: flex;
+    gap: clamp(1rem, 2vw, 2rem);
+    justify-content: center;
+    width: 100%;
+}
+
+.page-home .small-text {
+    font-family: 'Tiny5', sans-serif;
+    font-size: clamp(1.3rem, 2vw, 2rem);
+    color: var(--text);
+    white-space: nowrap;
+}
+
+.page-home .home-name h1 {
+    font-family: 'Silkscreen', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin: 0;
+}
+
+.page-home .home-intro {
+    font-size: clamp(1.1rem, 1.8vw, 1.65rem);
+    line-height: 1.55;
+    margin: clamp(1.5rem, 3vh, 2.25rem) 0 0;
+}
+
+.page-home .highlight {
+    font-weight: 700;
+}
+
+.page-home .highlight-yellow {
     color: var(--accent-yellow);
 }
 
-.intro .highlight:nth-child(2) {
+.page-home .highlight-teal {
     color: var(--accent-teal);
 }
 
-.intro .small-text {
-    font-family: 'Tiny5', sans-serif;
-    font-size: clamp(0.8rem, 2vw, 1rem);
-    color: var(--text);
-}
-
-.intro h1 {
-    font-family: 'Silkscreen', sans-serif;
-    font-size: clamp(2rem, 8vw, 4rem);
-    word-break: break-word;
-}
-
-.intro h2 {
-    font-family: 'Silkscreen', sans-serif;
-    font-size: clamp(1.5rem, 5vw, 3rem);
-}
-
-.intro img {
-    max-width: 100%;
+.page-home .home-profile {
+    display: block;
     height: auto;
-    width: clamp(100px, 30vw, 200px);
-    height: clamp(100px, 30vw, 200px);
+    margin: clamp(1rem, 2vh, 1.5rem) auto 0;
+    width: clamp(190px, 25vw, 325px);
+}
+
+.page-home .home-greeting {
+    font-family: 'Silkscreen', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    margin: clamp(0.75rem, 1.5vh, 1.25rem) 0 0;
 }
 
 /* Button Styling */
-.shadow-custom {
+.page-home .shadow-custom {
     box-shadow: 2px 2px 0px var(--border);
     font-weight: bold;
     border-radius: 5px;
 }
 
-.buttons {
+.page-home .home-buttons {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    gap: clamp(3rem, 9vw, 9rem);
+    margin: clamp(1.5rem, 3vh, 2.5rem) auto 0;
+    padding-bottom: 1rem;
 }
 
-.btn-primary {
+.page-home .btn-primary {
     background-color: var(--accent-blue);
-    border: none;
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Silkscreen', sans-serif;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    font-size: clamp(0.9rem, 2vw, 1rem);
-    padding: clamp(0.4rem, 1vw, 0.6rem) clamp(0.8rem, 2vw, 1.2rem);
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
+    min-width: clamp(7.5rem, 10vw, 9rem);
+    padding: 0.6rem 1rem;
 }
 
-.btn-primary:hover {
+.page-home .btn-primary:hover {
     background-color: #2563eb;
     transform: scale(1.05);
 }
@@ -422,13 +463,40 @@ header .logo {
         padding-right: 1rem;
     }
 
-    .buttons {
+    .page-home .home-main {
+        min-height: auto;
+    }
+
+    .page-home .home-hero {
+        padding-top: 2rem;
+    }
+
+    .page-home .home-name {
+        align-items: center;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .page-home .small-text {
+        font-size: 1.25rem;
+    }
+
+    .page-home .home-name h1 {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .page-home .home-intro {
+        font-size: 1rem;
+    }
+
+    .page-home .home-buttons {
+        align-items: center;
         flex-direction: column;
         gap: 1rem;
     }
 
-    .buttons .btn {
-        width: 100%;
+    .page-home .home-buttons .btn {
+        width: min(100%, 12rem);
     }
 
     .frame {
@@ -447,11 +515,6 @@ header .logo {
 
     .row [class*='col-'] {
         margin-bottom: 1rem;
-    }
-
-    .intro .d-flex {
-        flex-direction: column;
-        gap: 1rem;
     }
 
     .project-nav {
@@ -473,10 +536,6 @@ header .logo {
     .nav-pills-container {
         max-width: calc(100vw - 2rem);
         overflow-x: auto;
-    }
-
-    .buttons {
-        flex-wrap: wrap;
     }
 
     .about-grid {
