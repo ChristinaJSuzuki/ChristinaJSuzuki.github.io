@@ -251,13 +251,15 @@ header .logo {
 
 .page-about .about-main {
     max-width: none;
-    margin: 1.5rem auto 0;
+    margin: 3rem auto 0;
+    padding-left: 0;
+    padding-right: 0;
     width: 84vw;
 }
 
 .page-about .frame {
     display: block;
-    height: calc(100dvh - 7.5rem);
+    height: calc(100dvh - 9rem);
     margin: 0 auto;
     min-height: 0;
     padding: 1.5rem 2rem 2rem;
@@ -265,7 +267,7 @@ header .logo {
 
 /* About page layout */
 .page-about .about-heading-group {
-    margin-top: 2.75rem;
+    margin-top: 4.05rem;
 }
 
 .page-about .about-grid {
@@ -273,6 +275,7 @@ header .logo {
     grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
     gap: clamp(3rem, 7vw, 7rem);
     align-items: center;
+    margin-top: 2rem;
     text-align: left;
 }
 
@@ -281,6 +284,7 @@ header .logo {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: clamp(1.5rem, 3vw, 3rem);
+        margin-top: 1.75rem;
     }
 }
 
@@ -297,6 +301,8 @@ header .logo {
     color: inherit;
     position: relative;
     line-height: 0;
+    justify-self: center;
+    width: min(100%, 350px);
 }
 
 .page-about .card-poster:hover {
@@ -307,13 +313,14 @@ header .logo {
     display: block;
     object-fit: contain;
     max-width: 100%;
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
 /* Left info column styling for balance */
 .page-about .about-grid>section:first-child {
     max-width: 320px;
+    padding-left: 1rem;
     padding-right: 1.5rem;
 }
 
@@ -661,6 +668,7 @@ header .logo {
     }
 
     .page-about .frame {
+        height: auto;
         min-height: auto;
         padding: 1rem;
     }
