@@ -34,37 +34,44 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 1rem;
+    position: relative;
 }
 
 header .logo {
     flex-shrink: 0;
     line-height: 1;
+    position: absolute;
+    left: 1rem;
 }
 
 .nav-pills-container {
-    backdrop-filter: blur(0.5px);
+    align-items: center;
+    background: transparent;
     border: 2px solid var(--border);
-    border-radius: 12px;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3) inset;
+    border-radius: 4px;
+    box-shadow: 0 3px 0 var(--border);
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem;
+    flex-wrap: nowrap;
+    gap: 0.2rem;
+    padding: 0.25rem 0.35rem;
 }
 
 .nav-link {
+    align-items: center;
+    display: flex;
     font-family: 'Silkscreen', sans-serif;
     color: var(--text);
+    justify-content: center;
     transition: background-color 0.25s ease, color 0.25s ease, transform 0.15s ease;
-    border-radius: 8px;
-    padding: .35rem .6rem;
+    border-radius: 3px;
+    font-size: 0.6rem;
+    height: 1.75rem;
+    letter-spacing: 0.08em;
+    min-width: 3.75rem;
+    padding: 0.35rem 0.4rem;
     white-space: nowrap;
-    font-size: clamp(0.7rem, 2vw, 1rem);
 }
 
 .nav-link:hover {
@@ -260,7 +267,6 @@ header .logo {
 /* Nav pill container black frame on about page */
 .page-about .nav-pills-container {
     border-color: #000;
-    box-shadow: none;
     background: transparent;
 }
 
@@ -389,19 +395,22 @@ header .logo {
 
     header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 1rem;
         padding: 1rem;
     }
 
+    header .logo {
+        position: static;
+    }
+
     header nav {
-        width: 100%;
+        width: auto;
     }
 
     .nav-pills-container {
-        width: 100%;
-        justify-content: flex-start;
-        flex-direction: row;
+        max-width: 100%;
+        overflow-x: auto;
     }
 
     .nav-item {
@@ -462,7 +471,8 @@ header .logo {
     }
 
     .nav-pills-container {
-        flex-wrap: wrap;
+        max-width: calc(100vw - 2rem);
+        overflow-x: auto;
     }
 
     .buttons {
@@ -476,15 +486,11 @@ header .logo {
 
 @media (min-width: 993px) {
     header {
-        justify-content: flex-start;
+        justify-content: center;
     }
 
     .portfolio-heading {
         margin-bottom: .25rem;
-    }
-
-    header nav {
-        margin-left: 0;
     }
 
     .about-grid {
