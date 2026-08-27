@@ -483,12 +483,25 @@ header .logo {
 }
 
 .page-dev .projects-section {
-    min-width: 0;
     width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-dev .projects-section .section-title {
+    width: 100%;
+    text-align: center;
+}
+
+.page-dev .project-stage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .page-dev .project-view {
-    margin: 0;
+    width: 300%;
     max-width: 300px;
     position: relative;
 }
@@ -570,7 +583,8 @@ header .logo {
     text-align: center;
 }
 
-.page-dev .project-caption {
+.page-dev .project-skills {
+    width: 100%;
     font-size: clamp(1.375rem, 1.5vw, 1.5625rem);
     margin: 4.25rem 0 0;
     text-align: center;
@@ -808,7 +822,7 @@ header .logo {
         font-size: 1.5rem;
     }
 
-    .page-dev .project-caption {
+    .page-dev .project-skills {
         white-space: normal;
     }
 
