@@ -648,7 +648,7 @@ header .logo {
 
 .page-dev .stack-section {
     min-width: 0;
-    width: min(100%, 550px);
+    width: min(100%, 520px);
 }
 
 .page-dev .projects-section .dev-section-heading,
