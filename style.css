@@ -499,11 +499,6 @@ header .logo {
     align-items: center;
 }
 
-.page-dev .projects-section .section-title {
-    width: 100%;
-    margin: 0 0 1.4rem;
-    text-align: center;
-}
 
 .page-dev .project-stage {
     width: 100%;
@@ -513,7 +508,7 @@ header .logo {
 }
 
 .page-dev .project-view {
-    width: 300%;
+    width: 300px;
     max-width: 300px;
     margin: 0;
     position: relative;
