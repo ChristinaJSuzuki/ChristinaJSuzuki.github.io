@@ -455,7 +455,11 @@ header .logo {
 .page-dev .dev-heading {
     align-items: center;
     display: flex;
+    font-family: 'Silkscreen', sans-serif;
     font-size: clamp(2.25rem, 2.55vw, 2.55rem);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     gap: 0.65rem;
     justify-content: center;
     margin: 0 0 clamp(5rem, 8.75vh, 5.5rem);
@@ -478,7 +482,12 @@ header .logo {
 }
 
 .page-dev .dev-section-heading {
+    color: var(--accent-teal);
+    font-family: 'Silkscreen', sans-serif;
     font-size: clamp(2.125rem, 2.35vw, 2.375rem);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     margin: 0 0 1.5rem;
 }
 
@@ -641,17 +650,9 @@ header .logo {
     width: min(100%, 550px);
 }
 
-.page-dev .dev-section-heading {
-    color: var(--accent-teal);
-    font-family: 'Silkscreen', sans-serif;
-    letter-spacing: 0.12em;
-}
-
-.page-dev .projects-section .dev-section-heading {
-    padding-left: 6.4rem;
-}
-
+.page-dev .projects-section .dev-section-heading,
 .page-dev .stack-section .dev-section-heading {
+    width: 100%;
     text-align: center;
 }
 
