@@ -629,8 +629,7 @@ header .logo {
     display: block;
     width: 100%;
     max-width: 270px;
-    height: auto;
-    aspect-ratio: 388 / 554;
+    height: 350px;
     object-fit: cover;
     border: none;
     border-radius: 0;
