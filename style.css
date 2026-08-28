@@ -475,10 +475,10 @@ header .logo {
 
 .page-dev .dev-content {
     display: grid;
-    grid-template-columns: 480px 550px;
-    gap: 20px;
+    grid-template-columns: 480px 520px;
+    gap: 45px;
     margin-inline: auto;
-    max-width: 1050px;
+    max-width: 1045px;
 }
 
 .page-dev .dev-section-heading {
@@ -508,18 +508,22 @@ header .logo {
 }
 
 .page-dev .project-view {
-    width: 300px;
-    max-width: 300px;
+    width: 270px;
+    max-width: 270px;
     margin: 0;
     position: relative;
 }
 
 .page-dev .tech-grid {
     display: grid;
-    gap: 0 2rem;
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 550px;
+    grid-template-columns: repeat(2, 245px);
+    column-gap: 30px;
+    justify-content: center;
+    width: 100%;
+    max-width: 520px;
+    margin-inline: auto;
 }
+
 
 .page-dev .tech-badge {
     align-items: center;
@@ -534,7 +538,7 @@ header .logo {
             0 calc(100% - 10px));
     display: flex;
     gap: 0.5rem;
-    height: 3.25rem;
+    height: 52px;
     justify-content: flex-start;
     min-width: 0;
     padding: 0.35rem 0.6rem;
@@ -570,8 +574,10 @@ header .logo {
 }
 
 .page-dev .tech-column {
-    display: grid;
-    gap: 0.65rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+    width: 245px;
 }
 
 .page-dev .tech-icon {
@@ -593,7 +599,7 @@ header .logo {
 
 .page-dev .project-skills {
     width: 100%;
-    margin: 4.25rem 0 0;
+    margin: 3.75rem 0 0;
     font-size: clamp(1.375rem, 1.5vw, 1.5625rem);
     text-align: center;
     white-space: nowrap;
@@ -622,19 +628,19 @@ header .logo {
 .page-dev .project-view img {
     display: block;
     width: 100%;
-    max-width: 300px;
+    max-width: 270px;
     height: auto;
     aspect-ratio: 388 / 554;
     object-fit: cover;
-    border: 6px solid var(--border);
+    border: none;
     border-radius: 0;
 }
 
 .page-dev .project-nav {
     position: absolute;
     top: 50%;
-    left: -4.25rem;
-    right: -4.25rem;
+    left: -3.75rem;
+    right: -3.75rem;
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
