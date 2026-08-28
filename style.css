@@ -484,6 +484,7 @@ header .logo {
 
 .page-dev .projects-section {
     width: 480px;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -491,6 +492,7 @@ header .logo {
 
 .page-dev .projects-section .section-title {
     width: 100%;
+    margin: 0 0 1.4rem;
     text-align: center;
 }
 
@@ -498,11 +500,13 @@ header .logo {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .page-dev .project-view {
     width: 300%;
     max-width: 300px;
+    margin: 0;
     position: relative;
 }
 
@@ -585,10 +589,11 @@ header .logo {
 
 .page-dev .project-skills {
     width: 100%;
-    font-size: clamp(1.375rem, 1.5vw, 1.5625rem);
     margin: 4.25rem 0 0;
+    font-size: clamp(1.375rem, 1.5vw, 1.5625rem);
     text-align: center;
     white-space: nowrap;
+
 }
 
 .page-dev .arrow {
@@ -611,23 +616,24 @@ header .logo {
 }
 
 .page-dev .project-view img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     aspect-ratio: 388 / 554;
+    object-fit: cover;
     border: 6px solid var(--border);
     border-radius: 0;
-    height: auto;
-    object-fit: cover;
-    max-width: 300px;
-    width: 100%;
 }
 
 .page-dev .project-nav {
-    display: flex;
-    left: -4.25rem;
     position: absolute;
-    right: -4.25rem;
     top: 50%;
-    transform: translateY(-50%);
+    left: -4.25rem;
+    right: -4.25rem;
+    display: flex;
     justify-content: space-between;
+    transform: translateY(-50%);
 }
 
 .page-dev .stack-section {
@@ -874,7 +880,7 @@ header .logo {
         width: auto;
     }
 
-    .page-dev .project-caption {
+    .page-dev .project-skills {
         margin-top: 1.25rem;
     }
 
