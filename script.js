@@ -2,31 +2,62 @@ function showMessage(message) {
   alert(`You clicked on the ${message} button!`);
 }
 
-// Simple carousel for Dev page
-(() => {
-  const img = document.getElementById("projectImage");
-  const prev = document.getElementById("prevBtn");
-  const next = document.getElementById("nextBtn");
-  if (!img || !prev || !next) return;
+const projects = [
+  {
+    image: "./src/devcords.png",
+    alt: "Development project preview",
+  },
+  {
+    image: "./src/project2.png",
+    alt: "Second development project preview",
+  },
+  {
+    image: "./src/project3.png",
+    alt: "Third development project preview",
+  },
+];
 
-  const images = [
-    "./src/devcords.png",
-    "./src/card-technologies.jpg",
-    "./src/card-design.jpg",
-  ];
-  const altText = [
-    "Development project preview",
-    "Vintage computer technology project",
-    "Game controller design project",
-  ];
-  let index = 0;
+let currentProjectIndex = 0;
 
-  function show(i) {
-    index = (i + images.length) % images.length;
-    img.src = images[index];
-    img.alt = altText[index];
+const projectImage = document.getElementById("projectImage");
+const prevBtn = doument.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+function updateProject() {
+  const currentProject = projects[currentProjectIndex];
+
+  projectImage.src = currentProject.image;
+  projectImage.alt = currentProject.alt;
+}
+
+prevBtn.addEventListener("click", () => {
+  currentProjectIndex--;
+
+  if (currentProjectIndex < 0) {
+    currentProjectIndex = projects.length - 1;
   }
 
-  prev.addEventListener("click", () => show(index - 1));
-  next.addEventListener("click", () => show(index + 1));
-})();
+  updateProject();
+});
+
+nextBtn.addEventListener("click", () => {
+  currentProjectIndex++;
+
+  if (currentProjectIndex >= projects.length) {
+    currentProjectIndex = 0;
+  }
+
+  updateProject();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft") {
+    prevBtn.click();
+  }
+
+  if (event.key === "ArrowRight") {
+    nextBtn.click();
+  }
+});
+
+updateProject();
