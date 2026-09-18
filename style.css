@@ -603,6 +603,7 @@ header .logo {
     font-size: clamp(1.375rem, 1.5vw, 1.5625rem);
     text-align: center;
     white-space: nowrap;
+    margin-top: 2rem;
 
 }
 
