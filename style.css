@@ -240,11 +240,10 @@ header .logo {
 }
 
 .page-about .about-main {
-    max-width: none;
-    margin: 3rem auto 0;
-    padding-left: 0;
-    padding-right: 0;
+    max-width: 1280px;
     width: 84vw;
+    margin: 2.25rem auto 0;
+    padding: 0;
 }
 
 .page-about .frame {
@@ -253,24 +252,24 @@ header .logo {
     border-radius: 10px;
     box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.25);
     color: var(--text);
-    display: block;
-    height: calc(100dvh - 9rem);
+    width: 100%;
+    height: calc(100vh - 9rem);
     margin: 0 auto;
-    min-height: 0;
-    padding: 1.5rem 2rem 2rem;
+    padding: 0 3rem 2.5rem;
+    position: relative;
 }
 
 /* About page layout */
 .page-about .about-heading-group {
-    margin-top: 4.05rem;
+    padding-top: 5.25rem;
 }
 
 .page-about .about-grid {
     display: grid;
-    grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
-    gap: clamp(3rem, 7vw, 7rem);
+    grid-template-columns: 340px 1fr;
+    column-gap: 4rem;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 0;
     text-align: left;
 }
 
@@ -278,8 +277,8 @@ header .logo {
     .page-about .about-cards {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: clamp(1.5rem, 3vw, 3rem);
-        margin-top: 1.75rem;
+        gap: 2rem;
+        margin-top: 0;
     }
 }
 
@@ -290,7 +289,7 @@ header .logo {
     overflow: hidden;
     background: none;
     display: inline-block;
-    width: 350px;
+    width: 280px;
     max-width: 100%;
     text-decoration: none;
     color: inherit;
@@ -313,13 +312,14 @@ header .logo {
 
 /* Left info column styling for balance */
 .page-about .about-grid>section:first-child {
-    max-width: 320px;
-    padding-left: 1rem;
-    padding-right: 1.5rem;
+    width: 340px;
+    max-width: none;
+    padding: 0;
 }
 
 .page-about .about-grid>section:first-child p {
-    font-size: clamp(0.95rem, 1.15vw, 1.15rem);
+    font-size: 1rem;
+    font-weight: 400;
     line-height: 1.55;
     color: var(--text);
     max-width: 310px;
@@ -328,6 +328,8 @@ header .logo {
 .page-about .about-grid>section:first-child .btn-pixel {
     margin-top: 1.5rem;
     padding: .5rem 1rem;
+    width: 155px;
+    align-self: flex-start;
 }
 
 /* Nav pill container black frame on about page */
@@ -350,14 +352,15 @@ header .logo {
     color: #fff;
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 350px;
     height: 70px;
-    width: min(380px, 32vw);
-    padding: .35rem 2.5rem;
+    padding: 0;
     border-radius: 4px;
-    font-size: clamp(1.5rem, 2.6vw, 2.5rem);
-    font-weight: 400;
     font-family: 'Silkscreen', sans-serif;
-    margin: 0 0 2rem calc(-2rem - 6px);
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0 0 2rem calc(-3rem - 6px);
 }
 
 .page-about .portfolio-heading {
@@ -365,14 +368,14 @@ header .logo {
     font-size: clamp(2rem, 3.2vw, 3.1rem);
     font-weight: 400;
     letter-spacing: 3px;
-    margin-bottom: 0.2rem;
+    margin-bottom: 2rem;
 }
 
 /* Info frame paragraph sizes */
 .page-about .info-frame p {
-    font-size: clamp(1rem, 1.3vw, 1.25rem);
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.55;
     margin: 0 0 0.9rem 0;
 }
 
