@@ -242,7 +242,7 @@ header .logo {
 .page-about .about-main {
     max-width: 1280px;
     width: 84vw;
-    margin: 2.25rem auto 0;
+    margin: 0.25rem auto 0;
     padding: 0;
 }
 
@@ -268,7 +268,7 @@ header .logo {
     display: grid;
     grid-template-columns: 340px 1fr;
     column-gap: 4rem;
-    align-items: center;
+    align-items: start;
     margin-top: 0;
     text-align: left;
 }
@@ -368,20 +368,21 @@ header .logo {
     font-size: clamp(2rem, 3.2vw, 3.1rem);
     font-weight: 400;
     letter-spacing: 3px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    transform: translateY(-1rem);
 }
 
 /* Info frame paragraph sizes */
 .page-about .info-frame p {
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.55;
     margin: 0 0 0.9rem 0;
 }
 
 .page-about .info-frame p+p {
     /* the "Check out my Resume here." line */
-    font-size: 30px;
+    font-size: 1.15rem;
     font-weight: 400;
     margin-top: .25rem;
 }
@@ -923,7 +924,33 @@ header .logo {
     }
 
     .page-about .about-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .page-about .frame {
+        height: auto;
+        min-height: auto;
+        padding-top: 0;
+    }
+
+    .page-about .about-cards {
+        margin-top: 2rem;
+    }
+
+    .page-about .about-heading-group {
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .page-about .about-me-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .page-about .about-me-heading {
+        margin: 0;
     }
 
     .page-dev .dev-content {
