@@ -928,19 +928,43 @@ header .logo {
     }
 
     .page-about .frame {
-        height: auto;
-        min-height: auto;
+        height: calc(100vh - 9rem);
+        min-height: 0;
         padding-top: 0;
     }
 
     .page-about .about-cards {
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
     .page-about .about-heading-group {
         margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 3rem;
         display: flex;
         justify-content: center;
+    }
+
+    .page-about .about-grid>section:first-child {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .page-about .about-grid>section:first-child p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .page-about .info-frame {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
 
     .page-about .about-me-container {
@@ -951,6 +975,13 @@ header .logo {
 
     .page-about .about-me-heading {
         margin: 0;
+    }
+
+    .page-about .info-frame .btn {
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .page-dev .dev-content {
