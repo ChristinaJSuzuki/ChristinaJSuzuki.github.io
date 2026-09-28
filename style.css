@@ -807,23 +807,35 @@ header .logo {
 
     .page-about main.container {
         width: calc(100% - 2rem);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .page-about .frame {
+        width: 100%;
         height: auto;
-        min-height: auto;
-        padding: 1rem;
+        min-height: 0;
+        padding: 1.5rem;
+        box-sizing: border-box;
+        border-width: 4px;
     }
 
     .page-about .about-heading-group {
-        margin-top: 1rem;
+        padding-top: 0;
+        margin-top: 0;
     }
 
     .page-about .about-me-heading {
-        height: 3.5rem;
-        margin-left: 0;
-        padding-left: 1rem;
-        width: 100%;
+        width: min(85%, 22rem);
+        height: 4.5rem;
+        margin: calc(-1.5rem - 4px) auto 2rem;
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
     }
 
     .page-about .about-grid {
@@ -832,14 +844,43 @@ header .logo {
     }
 
     .page-about .about-grid>section:first-child {
-        max-width: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
         padding-right: 0;
+        text-align: center;
+    }
+
+    .page-about .info-frame {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .page-about .info-frame .btn-pixel {
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .page-about .about-cards {
         display: grid;
         gap: 1.5rem;
         grid-template-columns: 1fr;
+
+        width: 100%;
+        max-width: 22rem;
+        margin-left: auto;
+        margin-right: auto;
+
     }
 
     .page-design .design-main {
@@ -866,11 +907,6 @@ header .logo {
     .page-design .design-socials img {
         height: 2.5rem;
         width: 2.5rem;
-    }
-
-    .page-about .frame {
-        padding: 1.5rem;
-        border-width: 4px;
     }
 
     .page-about .about-grid {
