@@ -451,6 +451,13 @@ header .logo {
 }
 
 /* Dev page */
+
+.page-dev {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .page-dev .dev-main {
     max-width: 1320px;
     padding-top: 2.25rem;
@@ -744,6 +751,38 @@ header .logo {
     line-height: 1.5;
 }
 
+.page-dev .dev-footer {
+    width: 85vw;
+    max-width: 1280px;
+    margin: auto auto 0;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 2rem 2.75rem;
+}
+
+.page-dev .dev-socials {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.page-dev .dev-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.page-dev .dev-socials a:hover {
+    transform: translateY(-2px);
+}
+
+.page-dev .dev-socials img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+}
+
 /* Responsive Design */
 @media (max-width: 576px) {
     body {
@@ -936,8 +975,26 @@ header .logo {
         width: 100%;
     }
 
+    .page-dev .project-view {
+        width: 240px;
+        height: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .page-dev .tech-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        column-gap: 0.75rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .page-dev .tech-column {
+        width: 100%;
+        height: auto;
     }
 
     .row [class*='col-'] {
@@ -1028,6 +1085,38 @@ header .logo {
 
     .page-dev .dev-content {
         grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .page-dev .dev-heading {
+        font-size: clamp(1.75rem, 5vw, 2.25rem);
+        white-space: nowrap;
+        margin-bottom: 2rem;
+    }
+
+    .page-dev .stack-section {
+        margin-top: 1.5rem;
+    }
+
+    .page-dev .tech-column {
+        gap: 0.35rem;
+    }
+
+    .page-dev .projects-section .dev-section-heading {
+        margin-bottom: 1.5rem;
+    }
+
+    .page-dev .dev-footer {
+        position: static;
+        width: 100%;
+        max-width: none;
+        margin: 2rem auto 0;
+        padding: 0 0 1.5rem;
+        justify-content: center;
+    }
+
+    .page-dev .dev-socials {
+        margin-top: 1.5rem;
     }
 }
 
