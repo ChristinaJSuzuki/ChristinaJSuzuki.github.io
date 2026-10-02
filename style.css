@@ -783,6 +783,10 @@ header .logo {
     object-fit: contain;
 }
 
+.page-dev .project-mobile-controls {
+    display: none;
+}
+
 /* Responsive Design */
 @media (max-width: 576px) {
     body {
@@ -1008,6 +1012,53 @@ header .logo {
 
     .page-dev .arrow {
         font-size: 1.5rem;
+    }
+
+    .page-dev .project-stage {
+        flex-direction: column;
+    }
+
+    /* Mobile project carousel controls */
+    .page-dev .project-nav {
+        display: none;
+    }
+
+    .page-dev .project-mobile-controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        margin-top: 1rem;
+    }
+
+    .page-dev .project-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+    .page-dev .project-dot {
+        width: 0.65rem;
+        height: 0.65rem;
+        padding: 0;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .page-dev .project-dot.active {
+        background: #ffd43b;
+        border-color: #ffd43b;
+    }
+
+    .page-dev .project-flip-hint {
+        margin: 0;
+        font-family: "Silkscreen", sans-serif;
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        color: #fff;
     }
 
 }

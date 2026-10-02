@@ -50,6 +50,7 @@ const projectTitle = document.getElementById("projectTitle");
 const projectDescription = document.getElementById("projectDescription");
 const projectTechnologies = document.getElementById("projectTechnologies");
 const projectLink = document.getElementById("projectLink");
+const projectDots = document.querySelectorAll(".project-dot");
 
 function updateProject() {
   const currentProject = projects[currentProjectIndex];
@@ -60,6 +61,10 @@ function updateProject() {
   projectDescription.textContent = currentProject.description;
   projectTechnologies.textContent = currentProject.technologies;
   projectLink.href = currentProject.link;
+
+  projectDots.forEach((dot, index) => {
+    dot.classList.toggle("active", index === currentProjectIndex);
+  });
 }
 
 prevBtn.addEventListener("click", () => {
@@ -80,6 +85,13 @@ nextBtn.addEventListener("click", () => {
   }
 
   updateProject();
+});
+
+projectDots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    currentProjectIndex = index;
+    updateProject();
+  });
 });
 
 document.addEventListener("keydown", (event) => {
