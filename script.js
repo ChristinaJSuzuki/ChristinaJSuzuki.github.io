@@ -51,6 +51,11 @@ const projectDescription = document.getElementById("projectDescription");
 const projectTechnologies = document.getElementById("projectTechnologies");
 const projectLink = document.getElementById("projectLink");
 const projectDots = document.querySelectorAll(".project-dot");
+const projectCard = document.querySelector(".project-card");
+
+let touchStartX = 0;
+let touchEndX = 0;
+let didSwipe = false;
 
 function updateProject() {
   const currentProject = projects[currentProjectIndex];
@@ -92,6 +97,30 @@ projectDots.forEach((dot, index) => {
     currentProjectIndex = index;
     updateProject();
   });
+});
+
+projectCard.addEventListener("touchstart", (event) => {
+  touchStartX = event.changedTouches[0].screenX;
+  didSwipe = false;
+});
+
+projectCard.addEventListener("touchend", (event) => {
+  touchEndX = event.changedTouches[0].screenX;
+
+  const swipeDistance = touchEndX - touchStartX;
+  const minimumSwipeDistance = 50;
+
+  if (swipeDistance <= -minimumSwipeDistance) {
+    didSwipe = true;
+    projectCard.classList.remove("is-flipped");
+    nextBtn.click();
+  } else if (swipeDistance >= minimumSwipeDistance) {
+    didSwipe = true;
+    projectCard.classList.remove("is-flipped");
+    prevBtn.click();
+  } else {
+    projectCard.classList.toggle("is-flipped");
+  }
 });
 
 document.addEventListener("keydown", (event) => {
