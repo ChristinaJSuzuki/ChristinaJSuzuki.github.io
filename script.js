@@ -52,6 +52,7 @@ const projectTechnologies = document.getElementById("projectTechnologies");
 const projectLink = document.getElementById("projectLink");
 const projectDots = document.querySelectorAll(".project-dot");
 const projectCard = document.querySelector(".project-card");
+const flipHint = document.getElementById("flipHint");
 
 let touchStartX = 0;
 let touchEndX = 0;
@@ -113,13 +114,21 @@ projectCard.addEventListener("touchend", (event) => {
   if (swipeDistance <= -minimumSwipeDistance) {
     didSwipe = true;
     projectCard.classList.remove("is-flipped");
+    flipHint.textContent = "TAP TO FLIP";
     nextBtn.click();
   } else if (swipeDistance >= minimumSwipeDistance) {
     didSwipe = true;
     projectCard.classList.remove("is-flipped");
+    flipHint.textContent = "TAP TO FLIP";
     prevBtn.click();
   } else {
     projectCard.classList.toggle("is-flipped");
+
+    if (projectCard.classList.contains("is-flipped")) {
+      flipHint.textContent = "TAP TO RETURN";
+    } else {
+      flipHint.textContent = "TAP TO FLIP";
+    }
   }
 });
 

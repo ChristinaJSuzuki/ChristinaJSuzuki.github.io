@@ -1061,6 +1061,11 @@ header .logo {
         color: #fff;
     }
 
+    .page-dev .project-card:hover .project-card-inner,
+    .page-dev .project-card:focus .project-card-inner {
+        transform: rotateY(0deg);
+    }
+
     .page-dev .project-card.is-flipped .project-card-inner {
         transform: rotateY(180deg);
     }
