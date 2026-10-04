@@ -977,6 +977,7 @@ header .logo {
 
     .page-dev .projects-section {
         width: 100%;
+        margin-top: -2rem;
     }
 
     .page-dev .project-view {
@@ -1070,6 +1071,9 @@ header .logo {
         transform: rotateY(180deg);
     }
 
+    .page-dev footer {
+        margin-top: 2rem;
+    }
 }
 
 @media (min-width: 577px) and (max-width: 992px) {
