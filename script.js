@@ -4,6 +4,15 @@ function showMessage(message) {
 
 const projects = [
   {
+    image: "./src/project0.png",
+    alt: "Quiri app preview",
+    title: "Quiri",
+    description:
+      "An app that creates a respectful, structured space for exploring differing viewpoints - ideal for productive debates that prioritize understanding over winning.",
+    technologies: "Next.js | Vercel",
+    link: "https://www.quiri.io/",
+  },
+  {
     image: "./src/project1.jpg",
     alt: "Credit Card Checker project preview",
     title: "Credit Card Checker",
