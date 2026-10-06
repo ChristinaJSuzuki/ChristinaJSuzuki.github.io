@@ -397,14 +397,18 @@ header .logo {
 }
 
 .page-design .design-frame {
-    align-items: center;
     background: var(--bg);
     border: 6px solid var(--border);
     border-radius: 10px;
     box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.25);
+
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
     min-height: calc(100vh - 9rem);
+    padding: 3rem;
     position: relative;
 }
 
@@ -417,37 +421,19 @@ header .logo {
     text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
-.page-design .design-socials {
-    align-items: center;
-    bottom: 1.5rem;
-    display: flex;
-    gap: 0.75rem;
-    position: absolute;
-    right: 2rem;
-}
-
-.page-design .design-socials a {
-    align-items: center;
+.page-design .design-machine-stage {
+    width: 100%;
     display: flex;
     justify-content: center;
-    transition: transform 0.2s ease;
+    align-items: flex-start;
+    margin-top: 1.5rem;
 }
 
-.page-design .design-socials img {
+.page-design .design-machines {
     display: block;
-    height: 3rem;
+    width: min(100%, 760px);
+    height: auto;
     object-fit: contain;
-    width: 3rem;
-}
-
-.page-design .design-socials a:hover {
-    transform: translateY(-2px);
-}
-
-.page-design .design-socials a:focus-visible {
-    border-radius: 4px;
-    outline: 3px solid var(--accent-yellow);
-    outline-offset: 4px;
 }
 
 /* Dev page */
@@ -949,17 +935,6 @@ header .logo {
     .page-design .design-heading {
         font-size: clamp(1.5rem, 8vw, 2.25rem);
         text-align: center;
-    }
-
-    .page-design .design-socials {
-        bottom: 1rem;
-        gap: 0.5rem;
-        right: 1rem;
-    }
-
-    .page-design .design-socials img {
-        height: 2.5rem;
-        width: 2.5rem;
     }
 
     .page-about .about-grid {
