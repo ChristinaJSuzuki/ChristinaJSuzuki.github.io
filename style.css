@@ -429,12 +429,45 @@ header .logo {
     margin-top: 1.5rem;
 }
 
+.page-design .design-machine-wrap {
+    position: relative;
+    width: min(100%, 520px);
+}
+
 .page-design .design-machines {
     display: block;
-    width: min(100%, 760px);
+    width: 100%;
     height: auto;
     object-fit: contain;
 }
+
+.page-design .design-machine-hitbox {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 25%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.page-design .design-machine-hitbox--blue {
+    left: 0;
+}
+
+.page-design .design-machine-hitbox--green {
+    left: 25%;
+}
+
+.page-design .design-machine-hitbox--orange {
+    left: 50%;
+}
+
+.page-design .design-machine-hitbox--pink {
+    left: 75%;
+}
+
 
 /* Dev page */
 
