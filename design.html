@@ -47,21 +47,61 @@
                 <div class="design-machine-wrap">
                     <img class="design-machines" src="./src/gachapon.png" alt="Four colorful capsule machines">
 
-                    <button class="design-machine-hitbox design-machine-hitbox--blue" type="button"
-                        aria-label="Select blue capsule machine"></button>
-                    <button class="design-machine-hitbox design-machine-hitbox--green" type="button"
-                        aria-label="Select green capsule machine"></button>
-                    <button class="design-machine-hitbox design-machine-hitbox--orange" type="button"
-                        aria-label="Select orange capsule machine"></button>
-                    <button class="design-machine-hitbox design-machine-hitbox--pink" type="button"
-                        aria-label="Select pink capsule machine"></button>
+                    <!-- BLUE MACHINE -->
+                    <button class="design-machine-hitbox design-machine-hitbox--blue-top" type="button"
+                        aria-label="View blue machine project 1"></button>
+
+                    <button class="design-machine-hitbox design-machine-hitbox--blue-bottom" type="button"
+                        aria-label="View blue machine project 2"></button>
+
+                    <!-- GREEN MACHINE -->
+                    <button class="design-machine-hitbox design-machine-hitbox--green-top" type="button"
+                        aria-label="View green machine project 1"></button>
+
+                    <button class="design-machine-hitbox design-machine-hitbox--green-bottom" type="button"
+                        aria-label="View green machine project 2"></button>
+
+                    <!-- ORANGE MACHINE -->
+                    <button class="design-machine-hitbox design-machine-hitbox--orange-top" type="button"
+                        aria-label="View orange machine project 1"></button>
+
+                    <button class="design-machine-hitbox design-machine-hitbox--orange-bottom" type="button"
+                        aria-label="View orange machine project 2"></button>
+
+                    <!-- PINK MACHINE -->
+                    <button class="design-machine-hitbox design-machine-hitbox--pink-top" type="button"
+                        aria-label="View pink machine project 1"></button>
+
+                    <button class="design-machine-hitbox design-machine-hitbox--pink-bottom" type="button"
+                        aria-label="View pink machine project 2"></button>
                 </div>
             </section>
+            <!-- DESIGN PROJECT REVEAL -->
+            <div class="design-project-overlay" id="designProjectOverlay" hidden>
+                <div class="design-project-panel" role="dialog" aria-modal="true" aria-labelledby="designProjectTitle">
+                    <button class="design-project-close" id="designProjectClose" type="button"
+                        aria-label="Close project">
+                        &times;
+                    </button>
+
+                    <h2 id="designProjectTitle">Project Coming Soon</h2>
+
+                    <p id="designProjectDescription">
+                        Your design project will appear here!
+                    </p>
+
+                    <a id="designProjectLink" href="#" target="_blank" rel="noopener noreferrer" hidden>
+                        VIEW PROJECT
+                    </a>
+
+                </div>
+            </div>
+
         </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js" defer></script>
+    <script src="./capsule-gallery.js" defer></script>
 </body>
 
 </html>

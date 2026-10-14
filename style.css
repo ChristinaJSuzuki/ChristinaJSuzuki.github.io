@@ -443,31 +443,128 @@ header .logo {
 
 .page-design .design-machine-hitbox {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 25%;
+    width: 19%;
+    height: 19%;
     padding: 0;
-    border: 0;
-    background: transparent;
+    border: none;
     cursor: pointer;
 }
 
-.page-design .design-machine-hitbox--blue {
-    left: 0;
+/* Upper display windows */
+.page-design .design-machine-hitbox--blue-top {
+    left: 3%;
+    top: 7%;
 }
 
-.page-design .design-machine-hitbox--green {
-    left: 25%;
+.page-design .design-machine-hitbox--green-top {
+    left: 29%;
+    top: 7%;
 }
 
-.page-design .design-machine-hitbox--orange {
-    left: 50%;
+.page-design .design-machine-hitbox--orange-top {
+    left: 55%;
+    top: 7%;
 }
 
-.page-design .design-machine-hitbox--pink {
-    left: 75%;
+.page-design .design-machine-hitbox--pink-top {
+    left: 81%;
+    top: 7%;
 }
 
+/* Lower display windows */
+
+.page-design .design-machine-hitbox--blue-bottom {
+    left: 3%;
+    top: 51%;
+}
+
+.page-design .design-machine-hitbox--green-bottom {
+    left: 29%;
+    top: 51%;
+}
+
+.page-design .design-machine-hitbox--orange-bottom {
+    left: 55%;
+    top: 51%;
+}
+
+.page-design .design-machine-hitbox--pink-bottom {
+    left: 81%;
+    top: 51%;
+}
+
+/* TEMPORARY: Show clickable areas */
+.page-design .design-machine-hitbox {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* DESIGN PAGE REVEL */
+
+.page-design .design-project-overlay[hidden] {
+    display: none;
+}
+
+.page-design .design-project-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.page-design .design-project-panel {
+    position: relative;
+    width: min(90vw, 520px);
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 3rem 2rem;
+    background: #faf9f6;
+    border: 5px solid #000;
+    border-radius: 12px;
+    box-shadow: 8px 8px 0 #000;
+    color: #000;
+    text-align: center;
+}
+
+.page-design .design-project-panel h2 {
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.page-design .design-project-panel p {
+    font-family: 'Quantico', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.page-design .design-project-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    border: none;
+    background: transparent;
+    color: #000;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.page-design .design-project-panel a {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #ffc94d;
+    border: 3px solid #000;
+    border-radius: 6px;
+    color: #000;
+    font-family: 'Silkscreen', sans-serif;
+    text-decoration: none;
+}
 
 /* Dev page */
 
