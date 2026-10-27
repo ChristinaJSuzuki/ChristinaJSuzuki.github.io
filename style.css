@@ -500,7 +500,7 @@ header .logo {
     cursor: pointer;
 }
 
-/* DESIGN PAGE REVEL */
+/* DESIGN PAGE REVEAL */
 
 .page-design .design-project-overlay[hidden] {
     display: none;
@@ -564,6 +564,76 @@ header .logo {
     color: #000;
     font-family: 'Silkscreen', sans-serif;
     text-decoration: none;
+}
+
+/* DESIGN PROJECT - HORIZONTAL CONTENT */
+
+.page-design .design-project-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: stretch;
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+/* PROJECT IMAGE AREA */
+
+.page-design .design-project-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.page-design .design-project-image-placeholder {
+    width: 100%;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 3px solid #000;
+    border-radius: 8px;
+
+    background-color: #f0ede5;
+
+    font-family: "Silkscreen", sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* PROJECT INFO*/
+
+.page-design .design-project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 0;
+}
+
+.page-design .design-project-detail h3 {
+    margin-bottom: 0.25rem;
+    font-family: "Silkscreen", sans-serif;
+    font-size: 0.85rem;
+}
+
+.page-design .design-project-detail p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* MOBILE LAYOUT */
+@media (max-width: 576px) {
+    .page-design .design-project-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .page-design .design-project-image-placeholder {
+        min-height: 200px;
+    }
 }
 
 /* Dev page */

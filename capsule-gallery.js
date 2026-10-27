@@ -9,7 +9,7 @@ const designDescription = document.getElementById("designProjectDescription");
 
 let previousFocus = null;
 
-//Test the first capsule
+//First Capsule Test
 designButtons.forEach((button, index) => {
   button.addEventListener("click", () => {
     if (index !== 0) {
