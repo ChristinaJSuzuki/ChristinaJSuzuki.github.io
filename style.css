@@ -586,6 +586,29 @@ header .logo {
     min-width: 0;
 }
 
+/* DESIGN PROJECT - VIDEO */
+
+.page-design .design-project-video {
+    display: block;
+    width: 100%;
+    max-height: 360px;
+    height: auto;
+    object-fit: contain;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+/* DESIGN PROJECT - STATIC IMAGES */
+.page-design .design-project-static-image {
+    display: block;
+    width: 100%;
+    max-height: 360px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
 .page-design .design-project-image-placeholder {
     width: 100%;
     min-height: 280px;
