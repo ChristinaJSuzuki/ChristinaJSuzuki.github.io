@@ -12,7 +12,7 @@ const designProjects = [
   {
     title: "CHOCOLATI - HOT CHOCOLATE LABELS",
     category: "Packaging Design | Graphic Design",
-    tools: "Adobe Ilustrator",
+    tools: "Adobe Illustrator",
     description:
       "Custom product labels designed for Chocolati Café, a Seattle-based chocolatier. Created distinctive packaging for a variety of instant hot chocolates, combining elegant typography, illustrations, and product information to reflect the brand's identity.",
     mediaType: "image",
@@ -35,8 +35,9 @@ const designProjects = [
     tools: "Figma",
     description:
       "An interactive metal card prototype exploring visual presentation, transitions, and user interaction.",
-    mediaType: "Figma",
-    media: "",
+    mediaType: "figma",
+    media:
+      "https://embed.figma.com/proto/JN0Sh3fzmBRU3yY7qKpV1j/Royal-Brown-Card?node-id=201-398&p=f&viewport=652%2C88%2C0.87&scaling=scale-down&content-scaling=fixed&starting-point-node-id=201%3A398&page-id=0%3A1&embed-host=share",
     link: "https://www.behance.net/gallery/172922813/Royal-Brown-Metal-Card-Prototype",
   },
   {
@@ -121,7 +122,18 @@ function openDesignProject(index) {
   designMediaContainer.replaceChildren();
 
   // Add project media
-  if (project.mediaType === "video" && project.media) {
+  if (project.mediaType === "figma" && project.media) {
+    const iframe = document.createElement("iframe");
+
+    iframe.className = "design-project-figma";
+    iframe.src = project.media;
+    iframe.title = `${project.title} interactive prototype`;
+    iframe.allowFullscreen = true;
+    iframe.setAttribute("allow", "fullscreen");
+
+    designMediaContainer.appendChild(iframe);
+    designOverlay.hidden = false;
+  } else if (project.mediaType === "video" && project.media) {
     const video = document.createElement("video");
 
     video.className = "design-project-video";
