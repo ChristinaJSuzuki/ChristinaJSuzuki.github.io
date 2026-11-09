@@ -41,12 +41,17 @@ const designProjects = [
     link: "https://www.behance.net/gallery/172922813/Royal-Brown-Metal-Card-Prototype",
   },
   {
-    title: "PROJECT 5",
-    category: "Coming Soon",
-    tools: "Coming Soon",
-    description: "Fifth design project coming soon!",
-    mediaType: "image",
-    media: "",
+    title: "QUIRI.IO",
+    category: "UX/UI Design | Branding | Front-End Development",
+    tools: "Figma | Next.js | Tailwind CSS",
+    description:
+      "Collaborated with a team of designers on the UX/UI design and visual identity of Quiri.io, a platform built to encourage thoughtful, constructive dialogue. Contributed to the logo design and overall website experience, independently designed the hero section, and took responsibility for translating the web designs into responsive front-end code.",
+    mediaType: "gallery",
+    media: [
+      "./src/quiri-hero.png",
+      "./src/quiri-features.png",
+      "./src/quiri-community.png",
+    ],
     link: "",
   },
   {
@@ -122,7 +127,57 @@ function openDesignProject(index) {
   designMediaContainer.replaceChildren();
 
   // Add project media
-  if (project.mediaType === "figma" && project.media) {
+  if (project.mediaType === "gallery" && project.media?.length) {
+    let currentImageIndex = 0;
+
+    const gallery = document.createElement("div");
+    gallery.className = "design-project-gallery";
+
+    const image = document.createElement("img");
+    image.className = "design-project-gallery-image";
+    image.alt = `${project.title} - image 1`;
+    image.src = project.media[0];
+
+    const controls = document.createElement("div");
+    controls.className = "design-project-gallery-controls";
+
+    const previousButton = document.createElement("button");
+    previousButton.type = "button";
+    previousButton.textContent = "<";
+    previousButton.setAttribute("aria-label", "Previous image");
+
+    const counter = document.createElement("span");
+    counter.className = "design-project-gallery-counter";
+
+    const nextButton = document.createElement("button");
+    nextButton.type = "button";
+    nextButton.textContent = ">";
+    nextButton.setAttribute("aria-label", "Next image");
+
+    function updateGallery() {
+      image.src = project.media[currentImageIndex];
+      image.alt = `${project.title} - image ${currentImageIndex + 1}`;
+      counter.textContent = `${currentImageIndex + 1} / ${project.media.length}`;
+    }
+
+    previousButton.addEventListener("click", () => {
+      currentImageIndex =
+        (currentImageIndex - 1 + project.media.length) % project.media.length;
+      updateGallery();
+    });
+
+    nextButton.addEventListener("click", () => {
+      currentImageIndex = (currentImageIndex + 1) % project.media.length;
+      updateGallery();
+    });
+
+    controls.append(previousButton, counter, nextButton);
+    gallery.append(image, controls);
+    designMediaContainer.appendChild(gallery);
+
+    updateGallery();
+    designOverlay.hidden = false;
+  } else if (project.mediaType === "figma" && project.media) {
     const iframe = document.createElement("iframe");
 
     iframe.className = "design-project-figma";
