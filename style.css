@@ -705,15 +705,18 @@ header .logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    justify-content: flex-start;
+    align-self: flex-start;
+    gap: 10px;
 }
 
 .page-design .design-project-gallery-image {
     display: block;
     width: 100%;
-    height: 350px;
+    height: auto;
+    max-height: 350px;
     object-fit: contain;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 .page-design .design-project-gallery-controls {

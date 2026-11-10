@@ -52,7 +52,7 @@ const designProjects = [
       "./src/quiri-features.png",
       "./src/quiri-community.png",
     ],
-    link: "",
+    link: "https://www.quiri.io/",
   },
   {
     title: "PROJECT 6",
@@ -117,6 +117,12 @@ function openDesignProject(index) {
   // Update project link
   if (project.link) {
     designLink.href = project.link;
+    designLink.textContent = project.link.includes("behance.net")
+      ? "VIEW ON BEHANCE ↗"
+      : "VISIT WEBSITE ↗";
+
+    designLink.target = "_blank";
+    designLink.rel = "noopener noreferrer";
     designLink.hidden = false;
   } else {
     designLink.hidden = true;
