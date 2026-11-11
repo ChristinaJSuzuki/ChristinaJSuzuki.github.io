@@ -35,9 +35,8 @@ const designProjects = [
     tools: "Figma",
     description:
       "An interactive metal card prototype exploring visual presentation, transitions, and user interaction.",
-    mediaType: "figma",
-    media:
-      "https://embed.figma.com/proto/JN0Sh3fzmBRU3yY7qKpV1j/Royal-Brown-Card?node-id=201-398&p=f&viewport=652%2C88%2C0.87&scaling=scale-down&content-scaling=fixed&starting-point-node-id=201%3A398&page-id=0%3A1&embed-host=share",
+    mediaType: "video",
+    media: "./src/royal-brown-card.mp4",
     link: "https://www.behance.net/gallery/172922813/Royal-Brown-Metal-Card-Prototype",
   },
   {
@@ -55,13 +54,14 @@ const designProjects = [
     link: "https://www.quiri.io/",
   },
   {
-    title: "PROJECT 6",
-    category: "Coming Soon",
-    tools: "Coming Soon",
-    description: "Sixth design project coming soon!",
-    mediaType: "image",
-    media: "",
-    link: "",
+    title: "MOON AND SUN SWITCH",
+    category: "UI/UX Design | Interactive Prototype",
+    tools: "Figma",
+    description:
+      "An interactive day-and-night toggle switch concept exploring visual transitions, color, and playful micro-interactions.",
+    mediaType: "video",
+    media: "./src/moon-and-sun.mp4",
+    link: "https://www.behance.net/gallery/172843653/Moon-and-Sun-Switch",
   },
   {
     title: "PROJECT 7",
