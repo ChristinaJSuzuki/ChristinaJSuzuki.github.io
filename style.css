@@ -389,11 +389,10 @@ header .logo {
 
 /* Design page */
 .page-design .design-main {
-    max-width: none;
+    max-width: 1280px;
+    width: 84vw;
     margin: 0.25rem auto 0;
-    padding-left: 0;
-    padding-right: 0;
-    width: 85vw;
+    padding: 0;
 }
 
 .page-design .design-frame {
@@ -407,8 +406,11 @@ header .logo {
     align-items: center;
     justify-content: flex-start;
 
-    min-height: calc(100vh - 9rem);
-    padding: 3rem;
+    width: 100%;
+    height: calc(100vh - 9rem);
+    min-height: 0;
+    margin: 0 auto;
+    padding: 2rem 3rem;
     position: relative;
 }
 
@@ -452,45 +454,44 @@ header .logo {
 
 /* Upper display windows */
 .page-design .design-machine-hitbox--blue-top {
-    left: 3%;
-    top: 7%;
+    left: 2%;
+    top: 6%;
 }
 
 .page-design .design-machine-hitbox--green-top {
-    left: 29%;
-    top: 7%;
+    left: 28%;
+    top: 6%;
 }
 
 .page-design .design-machine-hitbox--orange-top {
-    left: 55%;
-    top: 7%;
+    left: 54%;
+    top: 6%;
 }
 
 .page-design .design-machine-hitbox--pink-top {
-    left: 81%;
-    top: 7%;
+    left: 80%;
+    top: 6%;
 }
 
 /* Lower display windows */
-
 .page-design .design-machine-hitbox--blue-bottom {
-    left: 3%;
-    top: 51%;
+    left: 2%;
+    top: 50%;
 }
 
 .page-design .design-machine-hitbox--green-bottom {
-    left: 29%;
-    top: 51%;
+    left: 28%;
+    top: 50%;
 }
 
 .page-design .design-machine-hitbox--orange-bottom {
-    left: 55%;
-    top: 51%;
+    left: 54%;
+    top: 50%;
 }
 
 .page-design .design-machine-hitbox--pink-bottom {
-    left: 81%;
-    top: 51%;
+    left: 80%;
+    top: 50%;
 }
 
 /* TEMPORARY: Show clickable areas */
@@ -642,12 +643,13 @@ header .logo {
 
 .page-design .design-project-video {
     display: block;
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     max-height: 360px;
     height: auto;
     object-fit: contain;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     background-color: transparent;
 }
 
@@ -751,6 +753,27 @@ header .logo {
 .page-design .design-project-gallery-counter {
     font-family: 'Silkscreen', sans-serif;
     font-size: 0.9rem;
+}
+
+/* Project thumbnails inside gachapon windows */
+
+/* Gachapon project thumbnails */
+.page-design .design-machine-hitbox {
+    position: absolute;
+    width: 16%;
+    height: 16%;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.page-design .design-machine-hitbox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    pointer-events: none;
 }
 
 /* MOBILE LAYOUT */
@@ -1532,5 +1555,190 @@ header .logo {
 @media (min-width: 993px) {
     header {
         justify-content: center;
+    }
+}
+
+/* =========================================
+   GACHAPON CAPSULE REVEAL ANIMATION
+   ========================================= */
+
+.page-design .capsule-animation-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    background: rgba(0, 0, 0, 0.45);
+    pointer-events: none;
+}
+
+.page-design .capsule-animation-overlay[hidden] {
+    display: none;
+}
+
+.page-design .capsule-animation-stage {
+    position: relative;
+    width: min(55vw, 280px);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+}
+
+.page-design .capsule-animation-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform-origin: center;
+    animation: capsuleDropWiggle 1.6s ease-in-out both;
+    filter: hue-rotate(var(--capsule-hue, 0deg));
+}
+
+.page-design .capsule-animation-flash {
+    position: absolute;
+    inset: 20%;
+    border-radius: 50%;
+    background: white;
+    opacity: 0;
+    transform: scale(0);
+    animation: capsuleFlash 0.35s ease-out 1.5s both;
+}
+
+@keyframes capsuleDropWiggle {
+    0% {
+        opacity: 0;
+        transform: translateY(-180px) scale(0.4) rotate(-25deg);
+    }
+
+    35% {
+        opacity: 1;
+        transform: translateY(20px) scale(1) rotate(10deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(-12deg);
+    }
+
+    65% {
+        transform: translateY(0) rotate(9deg);
+    }
+
+    78% {
+        transform: rotate(-6deg) scale(1.05);
+    }
+
+    90% {
+        transform: rotate(5deg) scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1.15);
+    }
+}
+
+@keyframes capsuleFlash {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    35% {
+        opacity: 0.95;
+        transform: scale(1.4);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(3);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .page-design .capsule-animation-image,
+    .page-design .capsule-animation-flash {
+        animation: none;
+    }
+}
+
+/* CAPSULE ANIMATION FIX */
+
+.page-design .capsule-animation-image {
+    animation: capsuleDropWiggle 1.6s ease-in-out both;
+}
+
+.page-design .capsule-animation-flash {
+    animation: capsuleFlash 0.35s ease-out 1.5s both;
+}
+
+/* =========================================
+   GACHAPON CAPSULE OPENING EFFECT
+   ========================================= */
+
+.page-design .capsule-animation-shell {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: capsuleDropWiggle 1.6s ease-in-out both;
+}
+
+.page-design .capsule-animation-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: none;
+    filter: hue-rotate(var(--capsule-hue, 0deg));
+}
+
+/* Display only the upper half */
+.page-design .capsule-half-top {
+    clip-path: inset(0 0 50% 0);
+    animation: capsuleOpenTop 0.5s ease-out 1.6s both;
+}
+
+/* Display only the lower half */
+.page-design .capsule-half-bottom {
+    clip-path: inset(50% 0 0 0);
+    animation: capsuleOpenBottom 0.5s ease-out 1.6s both;
+}
+
+.page-design .capsule-animation-flash {
+    animation: capsuleFlash 0.35s ease-out 1.95s both;
+}
+
+@keyframes capsuleOpenTop {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-35px, -65px) rotate(-25deg);
+        opacity: 0;
+    }
+}
+
+@keyframes capsuleOpenBottom {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(35px, 65px) rotate(25deg);
+        opacity: 0;
+    }
+}
+
+/* Keep reduced-motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    .page-design .capsule-animation-shell,
+    .page-design .capsule-half-top,
+    .page-design .capsule-half-bottom,
+    .page-design .capsule-animation-flash {
+        animation: none;
     }
 }

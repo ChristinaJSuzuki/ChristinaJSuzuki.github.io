@@ -64,21 +64,23 @@ const designProjects = [
     link: "https://www.behance.net/gallery/172843653/Moon-and-Sun-Switch",
   },
   {
-    title: "PROJECT 7",
-    category: "Coming Soon",
-    tools: "Coming Soon",
-    description: "Seventh design project coming soon!",
-    mediaType: "image",
-    media: "",
+    title: "ARTISTIC DESIGNS",
+    category: "Graphic Design | Digital Art",
+    tools: "Adobe Illustrator",
+    description:
+      "A collection of expressive digital artwork exploring vibrant colors, imaginative compositions, and creative visual storytelling.",
+    mediaType: "video",
+    media: "./src/artistic-designs.mp4",
     link: "",
   },
   {
-    title: "PROJECT 8",
-    category: "Coming Soon",
-    tools: "Coming Soon",
-    description: "Eighth design project coming soon!",
-    mediaType: "image",
-    media: "",
+    title: "3D DESIGNS",
+    category: "Graphic Design | 3D-Style Illustration",
+    tools: "Adobe Illustrator",
+    description:
+      "A collection of colorful 3D-inspired illustrations created in Adobe Illustrator, exploring dimensional forms, playful compositions, and bold visual styles.",
+    mediaType: "video",
+    media: "./src/3d-designs.mp4",
     link: "",
   },
 ];
@@ -237,9 +239,55 @@ function openDesignProject(index) {
 }
 
 // Connect all eight capsule windows
+const capsuleOverlay = document.getElementById("capsuleAnimationOverlay");
+const capsuleImage = document.getElementById("capsuleAnimationImage");
+
+const capsuleColors = [
+  "0deg", // Blue top
+  "0deg", // Blue bottom
+  "120deg", // Green top
+  "120deg", // Green bottom
+  "210deg", // Orange top
+  "210deg", // Orange bottom
+  "300deg", // Pink top
+  "300deg", // Pink bottom
+];
+
+let capsuleAnimating = false;
+
 designButtons.forEach((button, index) => {
   button.addEventListener("click", () => {
-    openDesignProject(index);
+    if (capsuleAnimating) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      openDesignProject(index);
+      return;
+    }
+
+    capsuleAnimating = true;
+    // Restart the animation every time a machine is clicked.
+    capsuleOverlay.style.setProperty("--capsule-hue", capsuleColors[index]);
+
+    const capsuleShell = capsuleOverlay.querySelector(
+      ".capsule-animation-shell",
+    );
+
+    // Restart the complete animation sequence.
+    capsuleOverlay.hidden = true;
+    void capsuleOverlay.offsetWidth;
+    capsuleOverlay.hidden = false;
+
+    capsuleShell.style.animation = "none";
+    void capsuleShell.offsetWidth;
+    capsuleShell.style.animation = "";
+
+    capsuleOverlay.hidden = false;
+
+    setTimeout(() => {
+      capsuleOverlay.hidden = true;
+      capsuleAnimating = false;
+      openDesignProject(index);
+    }, 2350);
   });
 });
 
